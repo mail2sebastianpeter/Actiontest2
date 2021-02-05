@@ -11,9 +11,8 @@ jobs:
           cd Actiontest2
           git checkout branch2
           git merge origin/banch1
-          git remote add origin https://github.com/mail2sebastianpeter/Actiontest2.git
       - name: Push changes
-        uses: ad-m/github-push-action@master
+        uses: actions-js/push@master
         with:
           github_token: ${{ secrets.PASSWORD }}
           branch: branch2
