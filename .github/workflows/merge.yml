@@ -9,8 +9,5 @@ jobs:
         run: |
           git clone https://github.com/mail2sebastianpeter/Actiontest.git
           cd Actiontest
-          git checkout branch4
-          git merge origin/branch3
-          git branch
-          git request-pull branch4 main
-    
+          git checkout branch2
+          git merge origin/branch1
