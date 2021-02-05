@@ -18,4 +18,5 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.PASSWORD }}
           BRANCH_PREFIX: "banch1"
           PULL_REQUEST_BRANCH: "main"
+          PULL_REQUEST_FROM_BRANCH: "banch1"
 
