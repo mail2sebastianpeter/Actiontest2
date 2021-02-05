@@ -3,6 +3,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: updating details
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
@@ -12,3 +13,4 @@ jobs:
           git checkout branch2
           git merge origin/banch1
           git push -u origin branch2
+          git request-pull branch2 main
