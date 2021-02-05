@@ -1,0 +1,16 @@
+name: github actions
+on: [push]
+jobs:
+  merge_branch:
+    name: merge the branch1 to branch2
+    runs-on: ubuntu-latest
+    steps:
+      - name: merge code
+        run: |
+          git clone https://github.com/mail2sebastianpeter/Actiontest.git
+          cd Actiontest
+          git checkout branch4
+          git merge origin/branch3
+          git branch
+          git request-pull branch4 main
+    
