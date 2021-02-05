@@ -1,18 +1,13 @@
-name: github actions
-on: [push]
+on: push
 jobs:
-  merge_branch:
-    name: merge the branch1 to branch2
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: merge code
-        run: |
-          git clone https://github.com/mail2sebastianpeter/Actiontest2.git
-          cd Actiontest2
-          git checkout branch2
-          git merge origin/banch1
-      - name: Push changes
-        uses: actions-js/push@master
-        with:
-          github_token: ${{ secrets.PASSWORD }}
-          branch: branch2
+      - uses: actions/checkout@v2
+      - run: |
+          date > generated.txt
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add .
+          git commit -m "generated"
+          git push
