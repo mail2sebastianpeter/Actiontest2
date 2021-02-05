@@ -7,11 +7,8 @@ jobs:
         with:
           fetch-depth: 0
       - run: |
-          git branch
-          git branch --all
-          date > generated.txt
           git config user.name Sebastian Peter
           git config user.email mail2sebastianpeter@gmail.com
-          git add .
-          git commit -m "generated"
-          git push
+          git checkout branch2
+          git merge origin/banch1
+          git push -u origin branch2
