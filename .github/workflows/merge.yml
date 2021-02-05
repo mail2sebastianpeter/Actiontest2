@@ -10,8 +10,8 @@ jobs:
           git branch
           git branch --all
           date > generated.txt
-          git config user.name github-actions
-          git config user.email github-actions@github.com
+          git config user.name Sebastian Peter
+          git config user.email mail2sebastianpeter@gmail.com
           git add .
           git commit -m "generated"
           git push
