@@ -11,3 +11,8 @@ jobs:
           cd Actiontest2
           git checkout branch2
           git merge origin/banch1
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.PASSWORD }}
+          branch: branch2
