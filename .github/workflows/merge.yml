@@ -17,8 +17,8 @@ jobs:
         uses: vsoch/pull-request-action@1.0.6
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH_PREFIX: "banch2"
+          BRANCH_PREFIX: "branch2"
           PULL_REQUEST_BRANCH: "main"
-          PULL_REQUEST_FROM_BRANCH: "banch2"
+          PULL_REQUEST_FROM_BRANCH: "branch2"
 
 
