@@ -9,5 +9,5 @@ jobs:
         run: |
           git clone https://github.com/mail2sebastianpeter/Actiontest.git
           cd Actiontest
-          git checkout branch2
+          git checkout origin/branch2
           git merge origin/branch1
