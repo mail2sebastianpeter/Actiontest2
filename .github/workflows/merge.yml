@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: merge code
         run: |
-          git clone https://github.com/mail2sebastianpeter/Actiontest.git
-          cd Actiontest
+          git clone https://github.com/mail2sebastianpeter/Actiontest2.git
+          cd Actiontest2
           git checkout origin/branch2
           git merge origin/branch1
