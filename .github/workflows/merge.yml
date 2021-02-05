@@ -13,3 +13,11 @@ jobs:
           git merge origin/banch1
           git push -u origin branch2
           git request-pull branch2 main
+          
+      - name: pull-request-action
+        uses: vsoch/pull-request-action@1.0.6
+        env:
+          GITHUB_TOKEN: ${{ secrets.PASSWORD }}
+          BRANCH_PREFIX: "banch1"
+          PULL_REQUEST_BRANCH: "main"
+
