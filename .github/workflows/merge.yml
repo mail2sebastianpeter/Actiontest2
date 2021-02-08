@@ -13,6 +13,7 @@ jobs:
           git merge origin/banch1
           git push -u origin branch2
           gh --version
+          gh pr create --title "The bug is fixed" --body "Everything works again" --base main --head banch1
      # - name: pull-request-action
       #  uses: vsoch/pull-request-action@1.0.6
        # env:
