@@ -4,6 +4,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+        env:
+          GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }}
         with:
           fetch-depth: 0
       - run: |
@@ -13,6 +15,7 @@ jobs:
           git merge origin/banch1
           git push -u origin branch2
           gh --version
+          gh auth login
           gh pr create --title "The bug is fixed" --body "Everything works again" --base main --head banch1
      # - name: pull-request-action
       #  uses: vsoch/pull-request-action@1.0.6
