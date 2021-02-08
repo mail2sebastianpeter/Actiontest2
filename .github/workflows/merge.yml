@@ -12,13 +12,13 @@ jobs:
           git checkout branch2
           git merge origin/banch1
           git push -u origin branch2
-          
-      - name: pull-request-action
-        uses: vsoch/pull-request-action@1.0.6
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH_PREFIX: "branch2"
-          PULL_REQUEST_BRANCH: "main"
-          PULL_REQUEST_FROM_BRANCH: "branch2"
+          gh --version
+     # - name: pull-request-action
+      #  uses: vsoch/pull-request-action@1.0.6
+       # env:
+        #  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+         # BRANCH_PREFIX: "branch2"
+          #PULL_REQUEST_BRANCH: "main"
+          #PULL_REQUEST_FROM_BRANCH: "branch2"
 
 
